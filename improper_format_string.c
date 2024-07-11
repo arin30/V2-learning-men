@@ -2,7 +2,7 @@
 
 int main() {
     char buf[100];
-    scanf("%s", buf);
-    printf(buf); // Format string vulnerability
+    fgets(buf, sizeof(buf), stdin); // Using fgets() to read input safely
+    printf("%s", buf); 
     return 0;
 }
